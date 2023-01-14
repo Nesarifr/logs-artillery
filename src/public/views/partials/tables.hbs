@@ -1,0 +1,25 @@
+<table class="container">
+        <thead>
+            <tr>
+                <th id="idtable">Id</th>
+                <th id="titletable">Title</th>
+                <th id="pricetable">Price</th>
+                <th id="imagentable">Thumbnail</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each productos}}
+        <tr>
+            <th id="idtable">{{this.id}}</th>
+            <td id="titletable">{{this.title}}</td>
+            <td id="pricetable">$ {{this.price}}</td>
+            <td id="imagentable">
+                <img src={{this.thumbnail}} alt="imagen ${{{this.title}}}">
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+
+</table>
+

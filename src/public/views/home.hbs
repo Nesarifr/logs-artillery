@@ -1,0 +1,34 @@
+<header class="container">
+    <nav>
+        <h1>Bienvenido {{user}} </h1>
+        <div>
+            <a href="./api/login/logout" class="logout"><button>Log Out</button></a>
+            <a href="./productos" class="administrador"><button>Administrador</button></a>
+        </div>
+    </nav>
+</header>
+<div class="contenedor-varios">
+    <div class="orden">
+        <div class="container-form-products">
+            <div class="form-handlebars">
+                {{> form}}
+            </div>
+            <div class="mensajes-chat">
+                {{> chat}}
+                <div class="mostrarMsj">
+                    {{> mensajes}}
+                </div>
+            </div>
+        </div>
+        <div class="productos-handlebars">
+            {{#if productos.error}}
+                {{> error}}
+            {{else}}
+                {{> tables}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+<script src="../socket.io/socket.io.js"></script>
+<script src="../../js/adminProduct.js"></script>
+<script src="./index.js"></script>

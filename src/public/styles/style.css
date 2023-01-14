@@ -1,0 +1,224 @@
+@import url('./globalStyles.css');
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(167deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(0, 255, 42, 1) 100%);
+    /* capa sobre fondo */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .6);
+}
+
+header {
+    background-color: var(--negro);
+    height: 5rem;
+    margin-bottom: 3rem;
+}
+
+nav {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 span {
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--lila);
+}
+
+nav img {
+    display: block;
+    height: 80%;
+}
+
+.container {
+    padding: 0;
+}
+
+.orden{
+    display: flex;
+    justify-content: space-around;
+}
+form {
+    background-color: var(--negro);
+    max-width: 80vh;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-header h2 {
+    margin-bottom: .8rem;
+}
+
+.form-header p {
+    background-color: var(--lila);
+    padding: .2rem 1rem;
+}
+
+form label {
+    margin-top: 1rem;
+    margin-bottom: .3rem;
+}
+
+form input {
+    border-radius: 100vh;
+    margin-bottom: 0rem;
+    padding: .3rem 0.9%;
+    border: 2px solid var(--app-grey);
+}
+
+form input:focus {
+    outline: none;
+    border: 2px solid var(--lila);
+}
+
+form button {
+    background-color: var(--azul);
+    color: white;
+    padding: .8rem 0;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+form button:hover {
+    background-color: var(--azul-hover);
+}
+
+#mensaje{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+}
+#mensaje button{
+    width: 20%;
+}
+#msj{
+    width: 80%;
+}
+nav button {
+    background-color: var(--azul);
+    color: white;
+    padding: .8rem 1.5rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+nav a button:hover {
+    background-color: var(--azul-hover);
+}
+
+img {
+    width: 90px;
+}
+
+.rounded {
+    background-color: var(--lila);
+    padding: 0.2rem 1rem
+}
+
+table{
+    border-color: var(--azul);
+    width: auto;
+}
+th {
+    border-left: 1px solid var(--azul);
+    border-bottom: 3px solid var(--azul);
+    padding: .5rem;
+}
+
+td {
+    border-bottom: 3px solid var(--lila);
+
+}
+tbody{
+    width: auto;
+}
+
+tbody td {
+    border-left: 1px solid var(--lila);
+    border-bottom: 3px solid var(--lila);
+    height: 8rem;
+    padding-left: 1rem;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+#imagentable{
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--app-grey);
+}
+
+#idtable{
+    width: 5%;
+}
+#titletable{
+    width:50%;
+}
+#pricetable{
+    width: 20%;
+}
+
+#imagentable img{
+    flex-wrap: nowrap;
+}
+
+.mensajeRecibido{
+    display: flex;
+    padding: .4rem;
+}
+
+.mostrarMsj{
+    background-color: black;
+    overflow-y: scroll;
+    margin-top: 2rem;
+    height: 10rem;
+    margin: 1rem;
+}
+#mensajeMail{
+    color: blue;
+}
+#mensajeFecyHora{
+    color: maroon;
+}
+#mensajeMsj{
+    font-style: italic;
+    color: green;
+}
+
+.container-form-products{
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-handlebars{
+    padding: 10px;
+}
+
+.productos-handlebars{
+    width: 50%;
+    padding: 10px;
+}

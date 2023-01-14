@@ -1,0 +1,13 @@
+<thead>
+    
+</thead>
+<tbody>
+    <h4>Porcentaje de comprension {{comp}}%</h4>
+    {{#each msjs}}
+        <div class="mensajeRecibido">
+            <p id="mensajeMail"><strong>{{this.author.nombre}} : </strong></p>
+            <p id="mensajeFecyHora"> {{this.fecyHora}} </p>
+            <p id="mensajeMsj">  {{this.text}} </p>
+        </div>
+    {{/each}}
+</tbody>

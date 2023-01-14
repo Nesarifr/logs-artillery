@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "09d76bb8-0d4c-4589-9c38-a25ad9faec1d",
+		"name": "Dotenv - process",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19741387"
+	},
+	"item": [
+		{
+			"name": "random",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/randoms?cant=5000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"randoms"
+					],
+					"query": [
+						{
+							"key": "cant",
+							"value": "5000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

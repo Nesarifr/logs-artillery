@@ -1,0 +1,39 @@
+@import url('./globalStyles.css');
+
+.card-productos{
+    background-color: var(--negro-claro);
+    width: 25rem;
+    min-height: 30rem;
+    margin: 1rem;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-productos a button {
+    background-color: var(--azul);
+    color: white;
+    padding: .8rem 1.5rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+.card-productos a button:hover {
+    background-color: var(--azul-hover);
+}
+
+.card-productos p {
+    font-size: 1rem;
+}
+
+.tareas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 20rem;
+}
