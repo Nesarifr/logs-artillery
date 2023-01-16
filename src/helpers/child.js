@@ -4,8 +4,8 @@ process.send("listo");
 
 process.on("message", (parentMsj)=>{
     if(parentMsj!=="iniciar"){
-        console.log(parentMsj, "en el child");
         const resultadoRandom = listRandom(parentMsj)
         process.send(resultadoRandom);
+        process.exit()
     }
 })

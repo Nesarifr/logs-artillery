@@ -1,4 +1,4 @@
-export const random = () =>{
+const random = () =>{
     
     return Math.floor(Math.random()*1000)
 

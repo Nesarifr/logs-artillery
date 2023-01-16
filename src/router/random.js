@@ -12,15 +12,15 @@ routerRandom.get('/child', async (req, res)=>{
     try{
         logger.info("se ingresa al router random con el child_process ")
         const child = fork("./src/helpers/child.js");
-        child.on("message", (childMsj)=>{
+        child.on("message", async (childMsj)=>{
             if (childMsj==="listo"){
                 if(!req.query.cant){
                     logger.error("falta definir la cantidad de randoms ?=500000 por ejemplo")
                     res.json({error:"falta definicr la cantidad de randoms ?=500000 por ejemplo"})
                 } else {
+                    logger.info("se manda cantidad al child")
                     child.send(req.query.cant)
                 }
-                
             }
             else{
                 res.json({resultado:childMsj})
@@ -39,6 +39,7 @@ routerRandom.get('/', async (req, res)=>{
             logger.error("falta definir la cantidad de randoms ?=500000 por ejemplo")
             res.json({error:"falta definicr la cantidad de randoms ?=500000 por ejemplo"})
         } else {
+            logger.info("se devuelve la lista random")
             const resultadoRandom = listRandom(req.query.cant)
             res.json({resultado:resultadoRandom})
         }

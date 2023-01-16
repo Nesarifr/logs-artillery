@@ -16,8 +16,6 @@ import { config } from './config.js';
 import parsedArgs from "minimist";
 import { logger } from "./src/utils/logger.js";
 
-
-
 /* ------------------- import de clase contenedora y otros ------------------ */
 import { ContenedorArchivo } from './src/managers/ContenedorArchivo.js';
 
@@ -118,10 +116,10 @@ app.get('/', async (req, res)=>{
 });
 
 
-app.get("*",(req,res)=>{
-    logger.warn("Se intenta acceder a un endpoint inexistente")
-    return res.redirect('/api/login')
-})
+// app.get("*",(req,res)=>{
+//     logger.warn("Se intenta acceder a un endpoint inexistente")
+//     return res.redirect('/api/login')
+// })
 
 
 /* ---------------------- Websocket --------------------- */
