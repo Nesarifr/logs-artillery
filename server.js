@@ -97,6 +97,8 @@ const  checkUserLogged = async (req,res,next)=>{
     }
 }
 
+
+
 app.get('/', async (req, res)=>{
     try{
         logger.info("Se ingresa al home de la pagina ")

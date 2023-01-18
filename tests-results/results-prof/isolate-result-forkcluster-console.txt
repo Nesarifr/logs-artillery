@@ -1,0 +1,159 @@
+Statistical profiling result from isolate-forkcluster-console.log, (2200 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1016   46.2%          C:\Program Files\nodejs\node.exe
+    827   37.6%          C:\WINDOWS\SYSTEM32\ntdll.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    352   16.0%   98.6%  LazyCompile: *listRandom file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:7:27
+      2    0.1%    0.6%  LazyCompile: *resolve node:path:158:10
+      1    0.0%    0.3%  LazyCompile: *<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:17:35
+      1    0.0%    0.3%  Function: ^shouldSetCookie C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express-session\index.js:464:29
+      1    0.0%    0.3%  Function: ^format C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\content-type\index.js:65:17
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+    357   16.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     50    2.3%   14.0%  GC
+   1843   83.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1016   46.2%  C:\Program Files\nodejs\node.exe
+    575   56.6%    C:\Program Files\nodejs\node.exe
+    394   68.5%      LazyCompile: *listRandom file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:7:27
+    389   98.7%        Function: ^<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+    389  100.0%          Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+    386   99.2%            Function: ^next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+      5    1.3%        LazyCompile: ~<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+      5  100.0%          Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      5  100.0%            LazyCompile: ~next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+     44    7.7%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     44  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     44  100.0%          Function: ^Socket._writeGeneric node:net:897:42
+     44  100.0%            Function: ^Socket._write node:net:934:35
+     28    4.9%      Function: ^internalCompileFunction node:internal/vm:30:33
+     27   96.4%        Function: ^wrapSafe node:internal/modules/cjs/loader:1117:18
+     27  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+     25   92.6%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      2    7.4%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    3.6%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1117:18
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+     17    3.0%      Function: ^moduleStrategy node:internal/modules/esm/translators:114:56
+     17  100.0%        Function: ^moduleProvider node:internal/modules/esm/loader:452:28
+     17  100.0%          C:\Program Files\nodejs\node.exe
+     10    1.7%      C:\Program Files\nodejs\node.exe
+      5   50.0%        LazyCompile: *listRandom file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:7:27
+      5  100.0%          Function: ^<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+      5  100.0%            Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      1   10.0%        LazyCompile: ~listRandom file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:7:27
+      1  100.0%          LazyCompile: ~<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+      1  100.0%            Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      1   10.0%        LazyCompile: ~bindDefaultResolver node:internal/dns/utils:250:29
+      1  100.0%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1   10.0%        LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:449:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      1   10.0%        LazyCompile: *next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\index.js:177:16
+      1  100.0%          Function: ^strategy.pass C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\passport\lib\middleware\authenticate.js:345:31
+      1  100.0%            Function: ^SessionStrategy.authenticate C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\passport\lib\strategies\session.js:45:50
+      1   10.0%        Function: ^readPackage node:internal/modules/cjs/loader:335:21
+      1  100.0%          Function: ^tryPackage node:internal/modules/cjs/loader:394:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+    298   29.3%    LazyCompile: *listRandom file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:7:27
+    295   99.0%      Function: ^<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+    295  100.0%        Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+    294   99.7%          Function: ^next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+    294  100.0%            Function: ^dispatch C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:98:45
+      3    1.0%      LazyCompile: ~<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+      3  100.0%        Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      3  100.0%          LazyCompile: ~next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+      3  100.0%            LazyCompile: ~dispatch C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:98:45
+     62    6.1%    Function: ^<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+     62  100.0%      Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+     62  100.0%        Function: ^next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+     62  100.0%          Function: ^dispatch C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:98:45
+     62  100.0%            Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+
+    827   37.6%  C:\WINDOWS\SYSTEM32\ntdll.dll
+     25    3.0%    C:\Program Files\nodejs\node.exe
+     14   56.0%      LazyCompile: *listRandom file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:7:27
+     13   92.9%        Function: ^<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+     13  100.0%          Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+     13  100.0%            Function: ^next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+      1    7.1%        LazyCompile: ~<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+      1  100.0%          Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            LazyCompile: ~next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+      1    4.0%      LazyCompile: ~onMessage C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\mongodb\lib\cmap\connection.js:157:14
+      1  100.0%        Function: ^<anonymous> C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\mongodb\lib\cmap\connection.js:61:44
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            Function: ^processIncomingData C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\mongodb\lib\cmap\message_stream.js:84:29
+      1    4.0%      LazyCompile: ~join node:path:421:7
+      1  100.0%        LazyCompile: ~pipe C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\send\index.js:506:43
+      1  100.0%          LazyCompile: ~serveStatic C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\serve-static\index.js:72:31
+      1  100.0%            Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      1    4.0%      LazyCompile: ~get origin node:internal/url:771:13
+      1  100.0%        Function: ^isURLInstance node:internal/url:1565:23
+      1  100.0%          LazyCompile: ~fileURLToPath node:internal/url:1486:23
+      1  100.0%            LazyCompile: ~getPackageScopeConfig node:internal/modules/esm/package_config:105:31
+      1    4.0%      LazyCompile: ~formatValue node:internal/util/inspect:766:21
+      1  100.0%        LazyCompile: ~inspect node:internal/util/inspect:310:17
+      1  100.0%          Function: ^_addListener node:events:541:22
+      1  100.0%            Function: ^addListener node:events:604:58
+      1    4.0%      LazyCompile: ~createDebug C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\debug\src\common.js:60:22
+      1  100.0%        Function: ~<anonymous> C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\engine.io\build\transport.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    4.0%      LazyCompile: ~RollingFileStream C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\streamroller\lib\RollingFileStream.js:5:14
+      1  100.0%        LazyCompile: ~openTheStream C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\log4js\lib\appenders\file.js:63:25
+      1  100.0%          LazyCompile: ~fileAppender C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\log4js\lib\appenders\file.js:29:22
+      1  100.0%            LazyCompile: ~configure C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\log4js\lib\appenders\file.js:135:19
+      1    4.0%      LazyCompile: ~FileHandle node:internal/fs/promises:136:14
+      1  100.0%        LazyCompile: ~open node:internal/fs/promises:536:20
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1    4.0%      Function: ^trim_prefix C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\index.js:293:23
+      1  100.0%        LazyCompile: *next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\index.js:177:16
+      1  100.0%          Function: ^strategy.pass C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\passport\lib\middleware\authenticate.js:345:31
+      1  100.0%            Function: ^SessionStrategy.authenticate C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\passport\lib\strategies\session.js:45:50
+      1    4.0%      Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1097:36
+      1    4.0%      Function: ^<anonymous> C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\mongodb\lib\cmap\connection.js:61:44
+      1  100.0%        LazyCompile: *emit node:events:460:44
+      1  100.0%          Function: ^processIncomingData C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\mongodb\lib\cmap\message_stream.js:84:29
+      1  100.0%            Function: ^_write C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\mongodb\lib\cmap\message_stream.js:31:11
+      1    4.0%      C:\Program Files\nodejs\node.exe
+      1  100.0%        Function: ^stat node:internal/modules/cjs/loader:161:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+
+    352   16.0%  LazyCompile: *listRandom file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/utils/random.js:7:27
+    347   98.6%    Function: ^<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+    347  100.0%      Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+    347  100.0%        Function: ^next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+    347  100.0%          Function: ^dispatch C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:98:45
+    347  100.0%            Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      5    1.4%    LazyCompile: ~<anonymous> file:///C:/Users/Usuario/Desktop/CoderHouse/Backend/Entregables/Clase%2031%20-%2032/src/router/random.js:36:29
+      5  100.0%      Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      5  100.0%        LazyCompile: ~next C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:116:16
+      3   60.0%          LazyCompile: ~dispatch C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:98:45
+      3  100.0%            Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+      2   40.0%          Function: ^dispatch C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\route.js:98:45
+      2  100.0%            Function: ^handle C:\Users\Usuario\Desktop\CoderHouse\Backend\Entregables\Clase 31 - 32\node_modules\express\lib\router\layer.js:86:49
+
