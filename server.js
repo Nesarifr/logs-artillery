@@ -34,7 +34,7 @@ const io = new IoServer.Server(httpServer); //conectamos con el servidor princip
 const __filename = fileURLToPath(import.meta.url); 
 // ^^^ Esta es una variable especial que contiene toda la meta información relativa al módulo, de forma que podremos acceder al contexto del módulo.
 const __dirname = path.dirname(__filename)
-const PORT = port || 3000;
+const PORT = process.env.PORT || 8080;
 
 /* ------------------------------- configuracion del servidor ------------------------------- */
 app.use(express.static(__dirname + '/src/public')) 
